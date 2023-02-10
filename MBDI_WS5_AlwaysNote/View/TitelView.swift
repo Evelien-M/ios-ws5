@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitelView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("AlwaysNote").font(.custom("Hoefler Text", size: 60)).foregroundColor(.yellow)
     }
 }
 
