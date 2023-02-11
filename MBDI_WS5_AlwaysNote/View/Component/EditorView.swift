@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct EditorView: View {
-    @State var noteContents = "Lorem ipsum dolor sit amet."
     @State var fontname = "Arial"
     @Binding var fontSize: Double
+    @Binding var noteContents: String
     
     var body: some View {
         TextEditor(text: $noteContents)
@@ -21,6 +21,6 @@ struct EditorView: View {
 
 struct EditorView_Previews: PreviewProvider {
     static var previews: some View {
-        EditorView(fontSize: .constant(14.0))
+        EditorView(fontSize: .constant(14.5),noteContents: .constant("Lorem ipsum dolor sit amet."))
     }
 }
