@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var fontSize = 17.0
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HeaderView(fontSize: $fontSize)
+            EditorView(fontSize: $fontSize)
         }
         .padding()
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

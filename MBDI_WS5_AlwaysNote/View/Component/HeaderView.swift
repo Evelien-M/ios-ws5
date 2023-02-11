@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct HeaderView: View {
+    @Binding var fontSize: Double
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TitelView()
+            ButtonView(fontSize: $fontSize)
+        }
     }
 }
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        HeaderView(fontSize: .constant(14.0))
     }
 }
