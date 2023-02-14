@@ -18,6 +18,11 @@ struct ContentView: View {
             EditorView(fontSize: $fontSize, noteContents: $noteContents)
         }.onAppear { initView() }
         .padding()
+        .background(Color("FlexLabelBackgroundColor"))
+    }
+    
+    init(){
+        UITextView.appearance().backgroundColor = .clear
     }
     
     func initView() {

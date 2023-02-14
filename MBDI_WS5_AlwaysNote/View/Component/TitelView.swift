@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TitelView: View {
     var body: some View {
-        Text("AlwaysNote").font(.custom("Hoefler Text", size: 60)).foregroundColor(.yellow)
+        Text("AlwaysNote").font(.custom("Hoefler Text", size: 60)).foregroundColor(Color("FlexLabelColor"))
     }
 }
 

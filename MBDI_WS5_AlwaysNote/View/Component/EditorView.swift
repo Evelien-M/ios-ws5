@@ -16,7 +16,12 @@ struct EditorView: View {
         TextEditor(text: $noteContents)
             .padding()
             .font(.custom(fontname, size: CGFloat(fontSize)))
+            .scrollContentBackground(.hidden)
+            .background(Color("FlexLabelColor"))
     }
+    
+    
+    
 }
 
 struct EditorView_Previews: PreviewProvider {
