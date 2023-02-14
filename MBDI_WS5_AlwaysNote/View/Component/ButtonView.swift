@@ -14,18 +14,23 @@ struct ButtonView: View {
     let fileName = "WS5Notes"
     @State private var showAlert = false
     var body: some View {
-        HStack{
-            Button(action: save) {
-                Text("Save")
+        ZStack{
+            HStack{
+                Button(action: save) {
+                    Text("Save")
+                }
+                .alert( isPresented: $showAlert,
+                        content: {Alert(title: Text("Your note has been stored"))})
+                Spacer()
             }
-            .alert( isPresented: $showAlert,
-                    content: {Alert(title: Text("Your note has been stored"))})
-            .padding(15)
-            Button(action: decreaseFont) {
-                Text("a")
-            }
-            Button(action: increaseFont) {
-                Text("A")
+            HStack{
+                Spacer()
+                Button(action: decreaseFont) {
+                    Text("a")
+                }
+                Button(action: increaseFont) {
+                    Text("A")
+                }
             }
         }
         
