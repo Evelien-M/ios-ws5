@@ -10,10 +10,19 @@ import SwiftUI
 struct HeaderView: View {
     @Binding var fontSize: Double
     @Binding var noteContents: String
+    @Environment(\.verticalSizeClass) var sizeClas
     var body: some View {
-        VStack {
-            TitelView()
-            ButtonView(fontSize: $fontSize, noteContents: $noteContents)
+        if sizeClas == .compact {
+            HStack {
+                TitelView()
+                ButtonView(fontSize: $fontSize, noteContents: $noteContents)
+            }
+        }
+        else {
+            VStack {
+                TitelView()
+                ButtonView(fontSize: $fontSize, noteContents: $noteContents)
+            }
         }
     }
 }
